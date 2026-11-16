@@ -51,18 +51,18 @@ $urgence_rouge=filtreUrgence($multidimensionnel);
         <?php foreach ($multidimensionnel as $m): ?>
 
             <?php
-                $badge = getBadgeService($v['code_servis']);
+                $badge = getBadgeService($m['code_servis']);
 
                 $libelleurgence = getLibelleurgence($m['urgence']);
 
-                $prix = calculerfacteur($v['age'],TARIF_BASE_CONSULTATION);
+                $prix = calculerfacteur($m['age'],TARIF_BASE_CONSULTATION);
             ?>
 
             <article class="carte urgence-<?= strtolower($m['urgence']) ?>">
 
                 <h2>
                     <?= htmlspecialchars($m['nom']) ?>
-                    (<?= $m['age'] ?> j)
+                    (<?= $m['age'] ?> ans)
                 </h2>
 
                 <span class="badge <?= $badge['classe'] ?>">

@@ -1,9 +1,9 @@
 <?php
 function calculerfacteur(int $age, float $TARIF_BASE_CONSULTATION ): float
 {
-    $tot=$age*TARIF_BASE_CONSULTATION ;
+    $tot= TARIF_BASE_CONSULTATION ;
     if ($age> 65) {
-        $tot=$tot + ($tot *(20*10/ 100));
+        $tot=$tot+($tot*20/100);
     }
     return $tot ;
 
@@ -27,9 +27,9 @@ function getLibelleurgence(string $urgence): string
     }
 }
 
-function getBadgeService(string $service): array
+function getBadgeService(string $cd_service): array
 {
-    switch ($service) {
+    switch ($cd_service) {
         case 'CARDIO':
             return [
                 "libelle" => "cardiologie",
