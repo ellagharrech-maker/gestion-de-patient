@@ -1,0 +1,117 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    color: #1e293b;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+.grille {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+}
+
+.carte {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    border: 1px solid #e2e8f0;
+}
+
+.carte h2 {
+    margin-bottom: 18px;
+    color: #1e40af;
+}
+
+.carte p {
+    margin: 15px 0;
+}
+
+.badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.badge-card {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.badge-derma {
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+
+.badge-pedia {
+    background: #f3e8ff;
+    color: #7e22ce;
+}
+
+.badge-inconnu {
+    background: #e2e8f0;
+    color: #475569;
+}
+
+.urgence-rougre {
+    border-left: 5px solid #dc2626;
+}
+
+.urgence-orange {
+    border-left: 5px solid #f59e0b;
+}
+
+.urgence-vert {
+    border-left: 5px solid #16a34a;
+}
+
+.recap {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+}
+
+.recap h2 {
+    color: #1e3a8a;
+    margin-bottom: 20px;
+}
+
+.recap p {
+    margin: 15px 0;
+}
+
+.recap ul {
+    padding-left: 25px;
+}
+
+.recap li {
+    padding: 8px;
+}
+
+@media (max-width: 600px) {
+    .grille {
+        grid-template-columns: 1fr;
+    }
+}
